@@ -1,0 +1,158 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 6}, {306, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label1",
+          "frame" : "{{437, 368}, {150, 32}}",
+          "uuid" : "DDD7D981-4B9E-41B0-B15B-191A47FFB7E1",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Data",
+          "font_size" : 25,
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 46}, {354, 650}}",
+        "class" : "TextView",
+        "attributes" : {
+          "uuid" : "0EBC0052-172F-4DAD-B426-CCB2F0913214",
+          "font_size" : 40,
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{412, 284}, {200, 200}}",
+          "editable" : true,
+          "border_width" : 2,
+          "custom_attributes" : "",
+          "alignment" : "left",
+          "autocorrection_type" : "no",
+          "text" : "",
+          "font_name" : "Monaco",
+          "spellchecking_type" : "no",
+          "class" : "TextView",
+          "name" : "input_data",
+          "flex" : "H"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{368, 46}, {650, 650}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "border_width" : 2,
+          "flex" : "H",
+          "frame" : "{{462, 334}, {100, 100}}",
+          "uuid" : "389B7B8D-97F1-43C7-AD0B-1279469A6D03",
+          "class" : "ImageView",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "graph"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 704}, {354, 58}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "D4443071-FD60-45C0-8E89-8FAC16F2B653",
+          "font_size" : 30,
+          "corner_radius" : 20,
+          "background_color" : "RGBA(0.835294,0.835294,0.835294,1.000000)",
+          "frame" : "{{472, 368}, {80, 32}}",
+          "tint_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+          "border_width" : 0,
+          "custom_attributes" : "{'enabled': False}",
+          "title" : "Update",
+          "font_bold" : true,
+          "class" : "Button",
+          "name" : "update_button",
+          "flex" : "HT"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{320, 6}, {698, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System-Bold>",
+          "frame" : "{{437, 368}, {150, 32}}",
+          "uuid" : "DDD7D981-4B9E-41B0-B15B-191A47FFB7E1",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Graph",
+          "name" : "label1",
+          "font_size" : 25
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{368, 704}, {325, 58}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "T",
+          "font_name" : "<System-Bold>",
+          "frame" : "{{437, 368}, {150, 32}}",
+          "uuid" : "DDD7D981-4B9E-41B0-B15B-191A47FFB7E1",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Linear:",
+          "name" : "is_linear_label",
+          "font_size" : 25
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{693, 704}, {325, 58}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "T",
+          "font_name" : "<System-Bold>",
+          "frame" : "{{437, 368}, {150, 32}}",
+          "uuid" : "DDD7D981-4B9E-41B0-B15B-191A47FFB7E1",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Proportional:",
+          "name" : "is_proportional_label",
+          "font_size" : 25
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {1024, 768}}",
+    "class" : "View",
+    "attributes" : {
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "name" : "Relationship Analyzer",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]
