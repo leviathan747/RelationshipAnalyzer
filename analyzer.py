@@ -8,23 +8,20 @@ from io import BytesIO
 # student functions
 def get_slope(x1, y1, x2, y2):
     # Student implements
-    deltay = y2 - y1
-    deltax = x2 - x1
-    m = deltay / deltax
+    m = (y2 - y1) / (x2 - x1)
     return m
 
 
 def get_y_intercept(m, x, y):
     # Student implements
-    mx = m * x
-    b = y - mx
+    b = y - m * x
     return b
 
 
 def plot_point(m, b, x):
     # Student implements
-    mx = m * x
-    y = mx + b
+    x = x
+    y = m * x + b
     return (x, y)
 
 
@@ -65,8 +62,16 @@ def linear_regression(points):
     return m, b
 
 
-v = None    # a reference to the top level view
-data = ''   # the current saved data
+v = None                # a reference to the top level view
+data = ''               # the current saved data
+minx, maxx = -10, 10    # min and max x on the graph
+miny, maxy = -10, 10    # min and max y on the graph
+majorx, minorx = max((maxx - minx) // 10, 1), max((maxx - minx) // 20, 1)
+majory, minory = max((maxy - miny) // 10, 1), max((maxy - miny) // 20, 1)
+m, b = 0, 0             # current line settings
+plotted_point = None    # current plotted point
+plotted_label = None    # current plotted point label
+ax = None
 
 
 class TextViewDelegate:
@@ -113,8 +118,12 @@ def parse_data(text):
 
 # update the plot and labels
 def update_plot(points=[]):
+    global minx, maxx, miny, maxy, m, b, majorx, majory, minorx, minory, ax, plotted_point, plotted_label
+
     # clear the plot
     plt.clf()
+    plotted_point = None
+    plotted_label = None
 
     # make the plot square (it will scale down)
     plt.figure(figsize=(7, 7))
@@ -124,15 +133,11 @@ def update_plot(points=[]):
     plt.axhline(color='k')
 
     # set default min and max values
-    minx, maxx = -10, 10
-    miny, maxy = -10, 10
     plt.xlim((minx, maxx))
     plt.ylim((miny, maxy))
 
     # turn on grid
     ax = plt.subplot(111)
-    majorx, minorx = max((maxx - minx) // 10, 1), max((maxx - minx) // 20, 1)
-    majory, minory = max((maxy - miny) // 10, 1), max((maxy - miny) // 20, 1)
     ax.xaxis.set_major_locator(ticker.MultipleLocator(majorx))
     ax.xaxis.set_minor_locator(ticker.MultipleLocator(minorx))
     ax.yaxis.set_major_locator(ticker.MultipleLocator(majory))
@@ -208,15 +213,34 @@ def update_plot(points=[]):
             plt.legend(loc='best')
 
     # update the image view
-    b = BytesIO()
-    plt.savefig(b)
-    img = ui.Image.from_data(b.getvalue())
+    img_bytes = BytesIO()
+    plt.savefig(img_bytes)
+    img = ui.Image.from_data(img_bytes.getvalue())
+    v['graph'].content_mode = ui.CONTENT_SCALE_ASPECT_FIT
+    v['graph'].image = img
+
+
+def slider_change(slider):
+    global plotted_point, plotted_label
+    if plotted_point is not None:
+        plotted_point.remove()
+    if plotted_label is not None:
+        plotted_label.remove()
+    x_val = slider.value * (maxx - minx) + minx
+    x, y = plot_point(m, b, x_val)
+    plotted_point = plt.scatter((x,), (y,), color='r')
+    plotted_label = ax.annotate(f'({x:.3g}, {y:.3g})', (x + minorx/4, y - minory/2))
+    # update the image view
+    img_bytes = BytesIO()
+    plt.savefig(img_bytes)
+    img = ui.Image.from_data(img_bytes.getvalue())
     v['graph'].content_mode = ui.CONTENT_SCALE_ASPECT_FIT
     v['graph'].image = img
 
 
 # define a variable for the top level view
 v = None
+
 
 if __name__ == '__main__':
     v = ui.load_view()

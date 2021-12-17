@@ -107,7 +107,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{368, 704}, {325, 58}}",
+        "frame" : "{{368, 704}, {219, 30}}",
         "class" : "Label",
         "attributes" : {
           "flex" : "T",
@@ -115,7 +115,7 @@
           "frame" : "{{437, 368}, {150, 32}}",
           "uuid" : "DDD7D981-4B9E-41B0-B15B-191A47FFB7E1",
           "class" : "Label",
-          "alignment" : "center",
+          "alignment" : "left",
           "text" : "Linear:",
           "font_size" : 25,
           "name" : "is_linear_label"
@@ -126,7 +126,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{693, 704}, {325, 58}}",
+        "frame" : "{{368, 732}, {219, 30}}",
         "class" : "Label",
         "attributes" : {
           "flex" : "T",
@@ -134,7 +134,7 @@
           "frame" : "{{437, 368}, {150, 32}}",
           "uuid" : "DDD7D981-4B9E-41B0-B15B-191A47FFB7E1",
           "class" : "Label",
-          "alignment" : "center",
+          "alignment" : "left",
           "text" : "Proportional:",
           "font_size" : 25,
           "name" : "is_proportional_label"
@@ -161,17 +161,34 @@
           "name" : "error_message",
           "flex" : "LRTB"
         },
-        "selected" : true
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{595, 716}, {423, 34}}",
+        "class" : "Slider",
+        "attributes" : {
+          "action" : "slider_change",
+          "flex" : "W",
+          "frame" : "{{412, 367}, {200, 34}}",
+          "uuid" : "7D6FAAC4-C0C6-4834-A9A6-F48DB6B63889",
+          "class" : "Slider",
+          "value" : 0.5,
+          "name" : "slider1"
+        },
+        "selected" : false
       }
     ],
     "frame" : "{{0, 0}, {1024, 768}}",
     "class" : "View",
     "attributes" : {
-      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
-      "enabled" : true,
-      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
       "name" : "Relationship Analyzer",
+      "enabled" : true,
       "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false
