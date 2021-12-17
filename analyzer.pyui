@@ -8,13 +8,13 @@
         "frame" : "{{6, 6}, {306, 32}}",
         "class" : "Label",
         "attributes" : {
-          "name" : "label1",
+          "font_size" : 25,
           "frame" : "{{437, 368}, {150, 32}}",
           "uuid" : "DDD7D981-4B9E-41B0-B15B-191A47FFB7E1",
           "class" : "Label",
           "alignment" : "center",
           "text" : "Data",
-          "font_size" : 25,
+          "name" : "label1",
           "font_name" : "<System-Bold>"
         },
         "selected" : false
@@ -37,7 +37,7 @@
           "alignment" : "left",
           "autocorrection_type" : "no",
           "text" : "",
-          "font_name" : "Monaco",
+          "font_name" : "<System>",
           "spellchecking_type" : "no",
           "class" : "TextView",
           "name" : "input_data",
@@ -58,7 +58,6 @@
           "uuid" : "389B7B8D-97F1-43C7-AD0B-1279469A6D03",
           "class" : "ImageView",
           "corner_radius" : 0,
-          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
           "name" : "graph"
         },
         "selected" : false
@@ -99,8 +98,8 @@
           "class" : "Label",
           "alignment" : "center",
           "text" : "Graph",
-          "name" : "label1",
-          "font_size" : 25
+          "font_size" : 25,
+          "name" : "label1"
         },
         "selected" : false
       },
@@ -118,8 +117,8 @@
           "class" : "Label",
           "alignment" : "center",
           "text" : "Linear:",
-          "name" : "is_linear_label",
-          "font_size" : 25
+          "font_size" : 25,
+          "name" : "is_linear_label"
         },
         "selected" : false
       },
@@ -137,10 +136,32 @@
           "class" : "Label",
           "alignment" : "center",
           "text" : "Proportional:",
-          "name" : "is_proportional_label",
-          "font_size" : 25
+          "font_size" : 25,
+          "name" : "is_proportional_label"
         },
         "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 614}, {354, 82}}",
+        "class" : "TextView",
+        "attributes" : {
+          "uuid" : "C75D6351-8329-4ED9-8CB7-82B0747EBFD7",
+          "font_size" : 20,
+          "frame" : "{{412, 284}, {200, 200}}",
+          "editable" : true,
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "text" : "Enter 2 numbers separated by a space on each line. You need at least 2 points.",
+          "font_name" : "<System>",
+          "spellchecking_type" : "default",
+          "class" : "TextView",
+          "name" : "error_message",
+          "flex" : "LRTB"
+        },
+        "selected" : true
       }
     ],
     "frame" : "{{0, 0}, {1024, 768}}",
@@ -149,8 +170,8 @@
       "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
       "enabled" : true,
       "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "name" : "Relationship Analyzer",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false
